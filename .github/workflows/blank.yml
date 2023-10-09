@@ -25,5 +25,7 @@ jobs:
         run: yarn install --production
 
       - name: run test
-        run: sudo yarn test
+        run: |
+          yarn add jest
+          sudo yarn test
          
