@@ -28,4 +28,9 @@ jobs:
         run: |
           yarn add jest
           sudo yarn test
-         
+
+      - name: Build and push to Dockerhub
+        run: |
+          docker build -t gdsc .
+          docker tag gdsc:latest synoti21/gdsc:latest
+          docker push synoti21/gdsc:latest
