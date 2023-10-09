@@ -40,5 +40,5 @@ jobs:
       - name: Build and push to Dockerhub
         run: |
           docker build -t gdsc .
-          docker tag gdsc:latest synoti21/gdsc:latest
+          docker tag gdsc:latest $/gdsc:latest
           docker push synoti21/gdsc:latest
